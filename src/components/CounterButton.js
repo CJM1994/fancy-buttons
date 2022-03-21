@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const CounterButton = () => {
+
+  const [clickAmount, setClickAmount] = useState();
 
   return (
     <button className="CounterButton">

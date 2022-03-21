@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 const AngryButton = () => {
 
+  const [anger, setAnger] = useState(0);
+
+  const handleClick = () => {
+    if (anger < 1) {
+      setAnger(anger + 0.11);
+    }
+    else {
+      setAnger(0);
+    };
+  };
+
   return (
-    <button className="AngryButton">
-      {/* When the threshold is not reached */}<span>Don't click me too much! </span>
-      {/* When the threshold is not reached */}<span>Rawr!</span>
+    <button onClick={handleClick} className="AngryButton" style={{ backgroundColor: `rgba(255, 0, 0, ${anger})` }}>
+      {anger < 1 && <span>Don't click me too much! </span>}
+      {anger > 1 && <span>Rawr!</span>}
     </button>
   );
 

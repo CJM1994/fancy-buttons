@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const TextRepeaterButton = () => {
+
+  const [repetitions, setRepetitions] = useState();
 
   return (
     <button className="TextRepeaterButton">
