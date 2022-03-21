@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// Components
+import AngryButton from './components/AngryButton';
+import CounterButton from './components/CounterButton';
+import LightswitchButton from './components/LightswitchButton';
+import TextRepeaterButton from './components/TextRepeaterButton';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
